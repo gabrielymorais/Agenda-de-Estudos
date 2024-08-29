@@ -33,6 +33,19 @@ Assista ao vídeo abaixo para ver o Agendêmica em ação e descobrir como usar 
 
 [Vídeo de Demonstração do Agendêmica](https://youtu.be/gRPDJ2UcVmQ)
 
+## Imagens
+
+Aqui estão algumas imagens do projeto:
+
+### Tela Inicial
+
+![Tela Inicial](assets/imgs/img1.png)
+
+### Funcionalidades 
+
+
+
+
 ## 📅 Contribua
 
 Quer contribuir para o desenvolvimento do Agendêmica? Fique à vontade para abrir issues, enviar pull requests ou sugerir melhorias. Estamos abertos a novas ideias que possam tornar este aplicativo ainda mais útil para estudantes ao redor do mundo.
