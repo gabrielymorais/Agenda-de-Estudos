@@ -1,0 +1,63 @@
+/* Estilização base geral */
+ion-card {
+    margin-bottom: 16px;
+  }
+  
+  ion-card-header {
+    padding: 10px;
+  }
+  
+  ion-title {
+    text-align: center;
+    padding: 15px;
+  }
+  
+  ion-card-title {
+    font-size: 1.2em;
+    font-weight: bolder;
+  }
+  
+  ion-card-content {
+    margin-top: 15px;
+    text-align: justify;
+  }
+  
+  /* Estilizando botões */
+  .text-center {
+    text-align: right;
+  }
+  
+  .remover-botao {
+    color: #ff3c22;
+    font-size: 10pt;
+  }
+  
+  .editar-botao {
+    font-size: 10pt;
+  }
+  
+  .botao-add {
+    background-color: #2ee600;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilização da parte dos cards com as cores especificando o tipo de tarefa */
+  .card-trabalho {
+    border-left: 5px solid #ff5722;
+  }
+  
+  .card-prova {
+    border-left: 5px solid #3f51b5;
+  }
+  
+  .card-apresentacao {
+    border-left: 5px solid #4caf50;
+  }
+  
+  .card-evento {
+    border-left: 5px solid #ffeb3b;
+  }
+  
+ 
+ 

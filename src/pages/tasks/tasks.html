@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Agendêmica</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- Formulário para adicionar tarefas -->
+  <ion-item>
+    <ion-label floating>Disciplina</ion-label>
+    <ion-input type="text" [(ngModel)]="newTask"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Detalhes da tarefa</ion-label>
+    <ion-textarea [(ngModel)]="newTaskDescription"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Tipo de tarefa</ion-label>
+    <ion-select [(ngModel)]="selectedCategory">
+      <ion-option value="trabalho">Trabalho</ion-option>
+      <ion-option value="prova">Prova</ion-option>
+      <ion-option value="apresentacao">Apresentação</ion-option>
+      <ion-option value="evento">Evento</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Data</ion-label>
+    <ion-datetime [(ngModel)]="newTaskDate" displayFormat="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+
+  <button ion-button full class="botao-add" (click)="addTask()">Adicionar Atividade</button>
+
+  <!-- Lista de Tarefas -->
+  <ion-card *ngFor="let task of tasks" [ngClass]="{
+    'card-trabalho': task.category === 'trabalho',
+    'card-prova': task.category === 'prova',
+    'card-apresentacao': task.category === 'apresentacao',
+    'card-evento': task.category === 'evento'
+  }">
+    <ion-card-header>
+      <ion-card-title>{{ task.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Categoria:</strong> {{ task.category }}</p>
+      <p><strong>Descrição:</strong> {{ task.description }}</p>
+      <p><strong>Data:</strong> {{ task.date }}</p>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="text-center">
+              <button ion-button clear class="remover-botao" (click)="removeTask(task)">Remover</button>
+              <button ion-button clear class="editar-botao" (click)="editTask(task)">Editar</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+
+  <!-- Formulário para edição de tarefas -->
+  <ion-item *ngIf="editingTask">
+    <ion-label floating>Disciplina</ion-label>
+    <ion-input type="text" [(ngModel)]="editingTask.name"></ion-input>
+  </ion-item>
+
+  <ion-item *ngIf="editingTask">
+    <ion-label floating>Detalhes da tarefa</ion-label>
+    <ion-textarea [(ngModel)]="editingTask.description"></ion-textarea>
+  </ion-item>
+
+  <ion-item *ngIf="editingTask">
+    <ion-label>Tipo de tarefa</ion-label>
+    <ion-select [(ngModel)]="editingTask.category">
+      <ion-option value="trabalho">Trabalho</ion-option>
+      <ion-option value="prova">Prova</ion-option>
+      <ion-option value="apresentacao">Apresentação</ion-option>
+      <ion-option value="evento">Evento</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item *ngIf="editingTask">
+    <ion-label>Data</ion-label>
+    <ion-datetime [(ngModel)]="editingTask.date" displayFormat="DD/MM/YYYY"></ion-datetime>
+  </ion-item>
+
+  <button ion-button full *ngIf="editingTask" (click)="saveTask()">Salvar Alterações</button>
+</ion-content>
