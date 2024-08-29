@@ -27,6 +27,12 @@ Bem-vindo ao **Agendêmica**! Este é um aplicativo de gerenciamento de tarefas 
 - **Angular**: Plataforma de desenvolvimento para criar aplicações web dinâmicas e responsivas.
 - **HTML/CSS**: Marcação e estilização da interface do usuário para proporcionar uma experiência atraente e agradável.
 
+## 🎥 Demonstração
+
+Assista ao vídeo abaixo para ver o Agendêmica em ação e descobrir como usar o aplicativo:
+
+[Vídeo de Demonstração do Agendêmica](https://youtu.be/gRPDJ2UcVmQ)
+
 ## 📅 Contribua
 
 Quer contribuir para o desenvolvimento do Agendêmica? Fique à vontade para abrir issues, enviar pull requests ou sugerir melhorias. Estamos abertos a novas ideias que possam tornar este aplicativo ainda mais útil para estudantes ao redor do mundo.
