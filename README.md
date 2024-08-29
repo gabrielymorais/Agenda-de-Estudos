@@ -35,15 +35,9 @@ Assista ao vídeo abaixo para ver o Agendêmica em ação e descobrir como usar 
 
 ## Imagens
 
-Aqui estão algumas imagens do projeto:
+### Aqui estão algumas imagens do projeto:
 
-### Tela Inicial
-
-![Tela Inicial](assets/imgs/img1.png)
-
-### Funcionalidades 
-
-
+ ![Tela Inicial](src/assets/imgs/img1.png) 
 
 
 ## 📅 Contribua
